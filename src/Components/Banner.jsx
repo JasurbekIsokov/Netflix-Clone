@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "../Baza/axios";
 import request from "../Baza/request";
 
+import Typed from "react-typed";
+
 const Banner = () => {
   const [movie, setMovie] = useState([]);
 
@@ -34,7 +36,14 @@ const Banner = () => {
     >
       <div className="main">
         <div className="bannerContents">
-          <h1 className="movieTitle">{movie.original_name}</h1>
+          <h1 className="movieTitle">
+            {movie.original_name ? (
+              <Typed strings={[`${movie?.original_name}`]} typeSpeed={100} />
+            ) : (
+              ""
+            )}
+          </h1>
+
           <div className="buttons">
             <button className="btn">Play</button>
             <button className="btn">My List</button>
