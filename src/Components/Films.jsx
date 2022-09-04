@@ -28,6 +28,7 @@ const Films = ({ title, movie_request, isLargeRow }) => {
       .catch((error) => console.error(error));
   };
 
+  // kino bosilganda uning traileri chiqishi uchun f-ya
   const handleClick = (movie) => {
     if (trailerUrl) {
       setTrailerUrl("");

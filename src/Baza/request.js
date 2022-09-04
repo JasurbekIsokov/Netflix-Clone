@@ -1,5 +1,7 @@
+// TMDB dan olingan KEY
 const API_KEY = "a976a4321a1550222c217c1ac3741aa3";
 
+// yuqoridagi API_KEY orqali URL nimalar olib kelishi
 const request = {
   fetchTrending: `/trending/all/week?api_key=${API_KEY}&languages=en-US`,
   fetchNetflixOriginals: `/discover/tv?api_key=${API_KEY}&with_networks=213`,

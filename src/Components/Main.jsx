@@ -10,6 +10,8 @@ const Main = ({ user }) => {
     <div>
       <Navbar user={user} />
       <Banner />
+
+      {/* Filmlarning categoriyalari */}
       <Films
         isLargeRow
         title={"NETFLIX ORIGINALS"}

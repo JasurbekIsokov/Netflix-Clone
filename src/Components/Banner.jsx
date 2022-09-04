@@ -5,9 +5,12 @@ import request from "../Baza/request";
 const Banner = () => {
   const [movie, setMovie] = useState([]);
 
+  // netflixdagi main sectionning elementlarini olib kelish
   const fetchMovie = async () => {
     const responseData = await axios.get(request.fetchNetflixOriginals);
     // console.log(responseData);
+
+    // sayt yangilanganda har doim har xil kino chiqishi uchun random qildik
     setMovie(
       responseData.data.results[
         Math.floor(Math.random() * responseData.data.results.length)
