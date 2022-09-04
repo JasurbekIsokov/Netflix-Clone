@@ -185,4 +185,39 @@ iframe {
   }
 }
 
+@media screen and (max-width: 470px) {
+  .navbar {
+    padding: 0 17px;
+  }
+  .main {
+    background: linear-gradient(90deg, #070707eb 43%, transparent 85%);
+    padding: 0 18px;
+  }
+  .movieTitle {
+    font-size: 40px !important;
+  }
+  .btn {
+    padding: 15px 20px !important;
+    font-size: 17px !important;
+  }
+  .movieDesc {
+    width: 80%;
+    font-size: 14px;
+  }
+
+  .filmsCategory {
+    padding: 20px 10px;
+  }
+  .films {
+    padding: 10px;
+    overflow-x: scroll;
+  }
+  .ytPlayer {
+    width: 93%;
+  }
+  .filmPosterLarge {
+    max-height: 220px;
+  }
+}
+
 /** RESPONSIVE **/
