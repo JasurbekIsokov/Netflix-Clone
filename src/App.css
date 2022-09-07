@@ -113,3 +113,37 @@ header {
 }
 
 /** HEADER**/
+
+/** FILMS CATEGORIES **/
+
+.filmsCategory {
+  padding: 15px;
+}
+.filmsCategory h3 {
+  color: #fff;
+  font-family: "poppins";
+}
+.films {
+  display: flex;
+  padding: 20px;
+}
+.film {
+  width: 100%;
+  object-fit: cover;
+  max-height: 100px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.filmPosterLarge {
+  max-height: 250px;
+}
+.ytPlayer {
+  width: 1275px;
+  padding: 0 20px;
+}
+
+iframe {
+  width: 100%;
+}
+
+/** FILMS CATEGORIES **/
