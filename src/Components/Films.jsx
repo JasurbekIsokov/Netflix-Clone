@@ -36,6 +36,12 @@ const Films = ({ title, movie_request, isLargeRow }) => {
     }
   };
 
+  const options = {
+    playerVars: {
+      autoplay: 1,
+    },
+  };
+
   return (
     <div>
       <h1></h1>
