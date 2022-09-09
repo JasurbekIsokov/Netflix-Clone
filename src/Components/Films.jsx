@@ -16,6 +16,16 @@ const Films = ({ title, movie_request, isLargeRow }) => {
     };
     fetchDatas();
   }, [movie_request]);
+
+  const fetchMovieTrailer = async (movie) => {
+    await axios
+      .get("/movie/" + movie?.id.toString() + sorov.trailerQuery)
+      .then((responseData) => {
+        setTrailerUrl(responseData.data.results[0]?.key);
+      })
+      .catch((error) => console.error(error));
+  };
+
   return (
     <div>
       <h1></h1>
