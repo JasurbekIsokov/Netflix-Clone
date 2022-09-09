@@ -9,7 +9,12 @@ const Main = ({ user }) => {
     <div>
       <Navbar user={user} />
       <Banner />
-      <Films />
+      <Films
+        isLargeRow
+        title={"NETFLIX ORIGINALS"}
+        movie_request={sorov.fetchNetflixOriginals}
+      />
+      <Films title={"Trending now"} movie_request={sorov.fetchTrending} />
     </div>
   );
 };
