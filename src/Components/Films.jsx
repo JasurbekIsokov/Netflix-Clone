@@ -10,6 +10,7 @@ const Films = ({ title, movie_request, isLargeRow }) => {
   const [trailerUrl, setTrailerUrl] = useState("");
 
   useEffect(() => {
+    // filmlarni olib keladi va setMOvies deegan arrayga beradi
     const fetchDatas = async () => {
       const responseData = await axios.get(movie_request);
       setMovies(responseData.data.results.slice(0, 6));
@@ -17,6 +18,7 @@ const Films = ({ title, movie_request, isLargeRow }) => {
     fetchDatas();
   }, [movie_request]);
 
+  // filmning teilerini olib keluvchi f-ya
   const fetchMovieTrailer = async (movie) => {
     await axios
       .get("/movie/" + movie?.id.toString() + sorov.trailerQuery)
@@ -24,6 +26,14 @@ const Films = ({ title, movie_request, isLargeRow }) => {
         setTrailerUrl(responseData.data.results[0]?.key);
       })
       .catch((error) => console.error(error));
+  };
+
+  const handleClick = (movie) => {
+    if (trailerUrl) {
+      setTrailerUrl("");
+    } else {
+      fetchMovieTrailer(movie);
+    }
   };
 
   return (
