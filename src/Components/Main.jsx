@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import request from "../Baza/request";
 
 import Navbar from "../Layouts/Navbar";
 import Banner from "./Banner";
@@ -12,9 +13,9 @@ const Main = ({ user }) => {
       <Films
         isLargeRow
         title={"NETFLIX ORIGINALS"}
-        movie_request={sorov.fetchNetflixOriginals}
+        movie_request={request.fetchNetflixOriginals}
       />
-      <Films title={"Trending now"} movie_request={sorov.fetchTrending} />
+      <Films title={"Trending now"} movie_request={request.fetchTrending} />
     </div>
   );
 };
