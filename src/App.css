@@ -24,7 +24,6 @@ body {
   margin-top: 20px;
   border: none;
   font-size: 20px;
-  font-family: "Poppins", sans-serif;
 }
 .loginBtn:hover {
   opacity: 0.8;
@@ -65,3 +64,52 @@ body {
   padding: 10px;
   border-radius: 50px;
 }
+
+/* NAVIGATION */
+
+/** HEADER **/
+
+header {
+  height: 100vh;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: inherit;
+  background: linear-gradient(90deg, #070707f7 50%, transparent 75%);
+  padding: 0 35px;
+}
+.bannerContents .movieTitle {
+  font-size: 60px;
+  color: #fff;
+  font-family: "poppins";
+}
+.buttons .btn {
+  padding: 15px 35px;
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  transition: 0.7s ease;
+  -webkit-transition: 0.7s ease;
+}
+.buttons .btn:nth-child(2) {
+  background-color: #000;
+  color: #fff;
+  margin-left: 20px;
+}
+.buttons .btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.movieDesc {
+  width: 50%;
+  color: #fff;
+  margin-top: 35px;
+  font-family: "poppins";
+}
+
+/** HEADER**/
