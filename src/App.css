@@ -1,0 +1,67 @@
+/** FONTS **/
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin-top: 0;
+}
+body {
+  background-color: #111111;
+}
+
+/** LOGIN **/
+
+.login {
+  text-align: center;
+  padding-top: 200px;
+}
+.login img {
+  width: 200px;
+}
+.login .loginBtn {
+  background-color: #fff;
+  color: #cd1820;
+  padding: 10px 45px;
+  margin-top: 20px;
+  border: none;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+.loginBtn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/** LOGIN **/
+
+/** NAVIGATION **/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  padding: 0 30px;
+}
+.fixedNav {
+  z-index: 999;
+  background-color: #000000e3;
+  backdrop-filter: blur(10px);
+}
+.brand img {
+  width: 100px;
+}
+.authButton {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+.authButton > .userImage {
+  width: 50px;
+  padding: 10px;
+  border-radius: 50px;
+}
