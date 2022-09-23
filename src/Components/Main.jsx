@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
+import { auth } from "../Firebase/config";
 
-const Main = () => {
+const Main = ({ user }) => {
   return (
     <div>
-      <h1> Main Component</h1>
+      <img src={user.photoUrl} alt="auth user" className="userImage" />
+      <button className="authButton" onClick={() => auth.signOut()}>
+        Log out
+      </button>
     </div>
   );
-}
+};
 
-export default Main
+export default Main;

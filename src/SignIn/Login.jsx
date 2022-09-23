@@ -1,9 +1,12 @@
 import React from "react";
+import { signInWithGoogle } from "../Firebase/config";
 
 const Login = () => {
   return (
     <div>
-      <h1>Login</h1>
+      <button className="loginBtn" onClick={signInWithGoogle}>
+        Sign in with goole
+      </button>
     </div>
   );
 };
