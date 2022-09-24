@@ -1,13 +1,11 @@
-import React from "react";
-import { auth } from "../Firebase/config";
+import React, { useState, useEffect } from "react";
+
+import Navbar from "../Layouts/Navbar";
 
 const Main = ({ user }) => {
   return (
     <div>
-      <img src={user.photoUrl} alt="auth user" className="userImage" />
-      <button className="authButton" onClick={() => auth.signOut()}>
-        Log out
-      </button>
+      <Navbar user={user} />
     </div>
   );
 };
