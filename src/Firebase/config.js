@@ -2,6 +2,7 @@
 import firebase from "firebase/app";
 import "firebase/auth";
 
+// firebase dan olingan kod
 const config = firebase.initializeApp({
   apiKey: "AIzaSyBzyqms-w61W2-mL1fWrueaSenYhDsqUpk",
   authDomain: "netflixclonetutorialauth.firebaseapp.com",
@@ -12,9 +13,10 @@ const config = firebase.initializeApp({
   measurementId: "G-NVPG5D7ZM6",
 });
 
+// auth qilish uchun
 export const auth = firebase.auth();
 
-const provider = new firebase.auth.GoogleAuthProvider();
+const provider = new firebase.auth.GoogleAuthProvider(); // google auth uchun
 provider.setCustomParameters({ prompt: "select_account" });
 
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
