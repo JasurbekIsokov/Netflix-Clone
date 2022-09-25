@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import { auth } from "../Firebase/config";
 
@@ -19,17 +18,6 @@ const Navbar = ({ user }) => {
     <div className={`navbar ${fixed && "fixedNav"}`}>
       <button className="authButton" onClick={() => auth.signOut()}>
         <img src={user.photoUrl} alt="auth user" className="userImage" />
-=======
-import React from "react";
-import { auth } from "../Firebase/config";
-
-const Navbar = ({ user }) => {
-  return (
-    <div>
-      <img src={user.photoUrl} alt="auth user" className="userImage" />
-      <button className="authButton" onClick={() => auth.signOut()}>
-        Log out
->>>>>>> 8b02e5d9226cc9937ffa948a0227f1c7faa9d471
       </button>
     </div>
   );
