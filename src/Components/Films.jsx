@@ -44,30 +44,36 @@ const Films = ({ title, movie_request, isLargeRow }) => {
   };
 
   return (
-    <div className="filmsCategory">
-      <h3>{title}</h3>
-      <div className="films">
-        {movies.map((movie) => (
-          <Tooltip
-            title={movie?.original_name || movie?.original_title}
-            key={movie.id}
-          >
-            <img
-              src={`https://image.tmdb.org/t/p/original/${
-                isLargeRow ? movie.poster_path : movie.backdrop_path
-              }`}
-              alt={movie.original_title}
-              onClick={() => handleClick(movie)}
-              loading="lazy"
-              className={`film ${isLargeRow && "filmPosterLarge"}`}
-            />
-          </Tooltip>
-        ))}
+    <>
+      <div className="filmsCategory">
+        <h3>{title}</h3>
+        <div className="films">
+          {movies.map((movie) => (
+            <Tooltip
+              title={movie?.original_name || movie?.original_title}
+              key={movie.id}
+            >
+              <img
+                src={`https://image.tmdb.org/t/p/original/${
+                  isLargeRow ? movie.poster_path : movie.backdrop_path
+                }`}
+                alt={movie.original_title}
+                onClick={() => handleClick(movie)}
+                loading="lazy"
+                className={`film ${isLargeRow && "filmPosterLarge"}`}
+              />
+            </Tooltip>
+          ))}
+        </div>
+        {trailerUrl && (
+          <YouTube
+            className="ytPlayer"
+            videoId={trailerUrl}
+            options={options}
+          />
+        )}
       </div>
-      {trailerUrl && (
-        <YouTube className="ytPlayer" videoId={trailerUrl} options={options} />
-      )}
-    </div>
+    </>
   );
 };
 
